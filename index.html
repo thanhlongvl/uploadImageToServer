@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <input type="text" name="textfile2" id="textfile" />
+    <button id="btn_dowload">Dowload File</button>
+    <script type="text/javascript">
+    $("#btn_dowload").click(function () {
+        var x = document.getElementById("textfile").value;
+        console.log(x)
+        window.open('getimage?sku='+x)
+    })
+    </script>
+</body>
+
+</html>

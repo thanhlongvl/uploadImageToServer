@@ -12,6 +12,10 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }))
 var image_dir = "C:\/Users\/DELL\/";
 var image_zip_dir = "C:\/Users\/DELL\/Desktop\/ImageUpload\/uploadImageToServer\/imageZip\/";
 
+app.get('/editor/index', function (req, res, next) {
+  res.sendfile('index.html')
+});
+
 app.get('/editor/getimage', function (req, res, next) {
   var param = req.query;
   zipfile(req, function (error_msg) {
